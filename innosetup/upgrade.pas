@@ -12,10 +12,10 @@ begin
   if CurStep = ssPostInstall then begin
     WriteInstallId();
 
-    rlUpgrade := GetEnv('OPENRUNE_UPGRADE');
+    rlUpgrade := GetEnv('SOLSCAPE_UPGRADE');
     if rlUpgrade <> '' then begin
       exePath := ExpandConstant('{app}\Solscape.exe');
-      Exec(exePath, GetEnv('OPENRUNE_UPGRADE_PARAMS'), '', SW_SHOW, ewNoWait, ResultCode);
+      Exec(exePath, GetEnv('SOLSCAPE_UPGRADE_PARAMS'), '', SW_SHOW, ewNoWait, ResultCode);
     end;
   end;
 end;
